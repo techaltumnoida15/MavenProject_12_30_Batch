@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import ru.yandex.qatools.ashot.AShot;
@@ -18,10 +19,18 @@ public class TC01 extends BaseClass{
 	
 	@Test
 	public void testCase01() throws Exception{
+		extentTest = extentReport.createTest("Naukri Test", "Searching jobs");   //Mandatory
+		extentTest.assignCategory("Regression Test");
+		
+		System.out.println("url is entered.");
+		Reporter.log("url is entered.");
+		extentTest.info("url is entered.");
+		extentTest.createNode("URL is entered - NODE.");
+		
 		//driver.get("http://www.ironpaper.com/webintel/articles/");
 		driver.get("http://www.naukri.com");
 		
-		WebElement searchJobTextBox = driver.findElement(By.id("qsbClick"));
+		WebElement searchJobTextBox = driver.findElement(By.id("qsbClick1"));
 		
 		Screenshot specificElement = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(500)).takeScreenshot(driver,searchJobTextBox); 
 		String scrrenshotPath = System.getProperty("user.dir") + "\\failure_screenshot\\" + "Element_Name"  + "_" + ".jpeg";
