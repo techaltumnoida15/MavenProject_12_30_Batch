@@ -5,23 +5,35 @@ import java.io.FileInputStream;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import javax.imageio.ImageIO;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.Screenshot;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
 public class BaseClass {
 
 	public WebDriver driver;
 	public Properties prop = new Properties();
+	public String failureScreenshotPath;
+	String projectPath;
 	
 	@BeforeMethod
 	public void openBrowser() {
 		//Open Browser
-		String projectPath = System.getProperty("user.dir");
+		projectPath = System.getProperty("user.dir");
 		System.out.println(projectPath);
 		
 		String browserName = "chrome";
@@ -70,8 +82,24 @@ public class BaseClass {
 	}
 	
 	@AfterMethod
-	public void closeBrowser() {
-		driver.quit();
+	public void closeBrowser(ITestResult result) throws Exception{
+		if(!result.isSuccess()) {
+			System.out.println("Taking screenshot");
+			failureScreenshotPath = System.getProperty("user.dir") + "\\failure_screenshot\\abc1.jpeg";
+			File destScreenshot = new File(failureScreenshotPath);
+			
+			
+			//Take Screenshot
+			//File srcScrrenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+			Screenshot fpScreenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(500)).takeScreenshot(driver);
+			ImageIO.write(fpScreenshot.getImage(),"JPEG", destScreenshot);
+			
+			
+			//FileUtils.copyFile(srcScrrenshot, destScreenshot);
+		}
+		
+		
+		//driver.quit();
 	}
 
 	public String getDataFromPropFile(String key) throws Exception{

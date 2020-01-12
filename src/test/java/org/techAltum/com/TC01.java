@@ -1,13 +1,18 @@
 package org.techAltum.com;
 
+import java.io.File;
+
+import javax.imageio.ImageIO;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-import org.techAltum.com.BaseClass;
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.Screenshot;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
 public class TC01 extends BaseClass{
 	
@@ -17,6 +22,11 @@ public class TC01 extends BaseClass{
 		driver.get("http://www.naukri.com");
 		
 		WebElement searchJobTextBox = driver.findElement(By.id("qsbClick"));
+		
+		Screenshot specificElement = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(500)).takeScreenshot(driver,searchJobTextBox); 
+		String scrrenshotPath = System.getProperty("user.dir") + "\\failure_screenshot\\" + "Element_Name"  + "_" + ".jpeg";
+		ImageIO.write(specificElement.getImage(),"JPEG",new File(scrrenshotPath));
+		
 		searchJobTextBox.click();
 		
 		//Wait explicit - Skill Text Box

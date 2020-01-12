@@ -1,121 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite1" duration-ms="76003" started-at="2019-11-16T14:12:13 IST" finished-at="2019-11-16T14:13:29 IST">
+  <suite name="Default suite" duration-ms="29673" started-at="2020-01-12T13:38:00 IST" finished-at="2020-01-12T13:38:30 IST">
     <groups>
     </groups>
-    <test name="Maven Tests" duration-ms="76003" started-at="2019-11-16T14:12:13 IST" finished-at="2019-11-16T14:13:29 IST">
-      <class name="org.techAltum.com.TC02">
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:org.techAltum.com.TC02@35d176f7]" name="openBrowser" is-config="true" duration-ms="10097" started-at="2019-11-16T14:12:53 IST" finished-at="2019-11-16T14:13:03 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="testCase02()[pri:0, instance:org.techAltum.com.TC02@35d176f7]" name="testCase02" duration-ms="15146" started-at="2019-11-16T14:13:03 IST" finished-at="2019-11-16T14:13:18 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testCase02 -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:org.techAltum.com.TC02@35d176f7]" name="closeBrowser" is-config="true" duration-ms="726" started-at="2019-11-16T14:13:18 IST" finished-at="2019-11-16T14:13:19 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- org.techAltum.com.TC02 -->
+    <test name="Default test" duration-ms="29673" started-at="2020-01-12T13:38:00 IST" finished-at="2020-01-12T13:38:30 IST">
       <class name="org.techAltum.com.TC01">
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:org.techAltum.com.TC01@551aa95a]" name="openBrowser" is-config="true" duration-ms="21666" started-at="2019-11-16T14:12:13 IST" finished-at="2019-11-16T14:12:35 IST">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:org.techAltum.com.TC01@1f7030a6]" name="openBrowser" is-config="true" duration-ms="10643" started-at="2020-01-12T13:38:00 IST" finished-at="2020-01-12T13:38:11 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="testCase01()[pri:0, instance:org.techAltum.com.TC01@551aa95a]" name="testCase01" duration-ms="16139" started-at="2019-11-16T14:12:35 IST" finished-at="2019-11-16T14:12:51 IST">
+        <test-method status="PASS" signature="testCase01()[pri:0, instance:org.techAltum.com.TC01@1f7030a6]" name="testCase01" duration-ms="18981" started-at="2020-01-12T13:38:11 IST" finished-at="2020-01-12T13:38:30 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCase01 -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:org.techAltum.com.TC01@551aa95a]" name="closeBrowser" is-config="true" duration-ms="1293" started-at="2019-11-16T14:12:51 IST" finished-at="2019-11-16T14:12:53 IST">
+        <test-method status="PASS" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:org.techAltum.com.TC01@1f7030a6]" name="closeBrowser" is-config="true" duration-ms="3" started-at="2020-01-12T13:38:30 IST" finished-at="2020-01-12T13:38:30 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCase01 status=SUCCESS method=TC01.testCase01()[pri:0, instance:org.techAltum.com.TC01@1f7030a6] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- org.techAltum.com.TC01 -->
-      <class name="org.techAltum.com.TC03">
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:org.techAltum.com.TC03@1dfe2924]" name="openBrowser" is-config="true" duration-ms="9713" started-at="2019-11-16T14:13:19 IST" finished-at="2019-11-16T14:13:28 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method status="FAIL" signature="testNaukri()[pri:0, instance:org.techAltum.com.TC03@1dfe2924]" name="testNaukri" duration-ms="467" started-at="2019-11-16T14:13:28 IST" finished-at="2019-11-16T14:13:29 IST">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#qsbClick"}
-  (Session info: chrome=78.0.3904.97)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-AMSG348', ip: '192.168.0.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.97, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: C:\Users\atyag\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51972}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: aed8561705f641f6c45c109f9ed46834
-*** Element info: {Using=id, value=qsbClick}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#qsbClick"}
-  (Session info: chrome=78.0.3904.97)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-AMSG348', ip: '192.168.0.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.97, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: C:\Users\atyag\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51972}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: aed8561705f641f6c45c109f9ed46834
-*** Element info: {Using=id, value=qsbClick}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
-at org.openqa.selenium.By$ById.findElement(By.java:188)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
-at org.techAltum.com.TC03.testNaukri(TC03.java:21)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:770)
-at org.testng.TestRunner.run(TestRunner.java:591)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-at org.testng.SuiteRunner.run(SuiteRunner.java:304)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-at org.testng.TestNG.runSuites(TestNG.java:1032)
-at org.testng.TestNG.run(TestNG.java:1000)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testNaukri -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:org.techAltum.com.TC03@1dfe2924]" name="closeBrowser" is-config="true" duration-ms="679" started-at="2019-11-16T14:13:29 IST" finished-at="2019-11-16T14:13:29 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- org.techAltum.com.TC03 -->
-    </test> <!-- Maven Tests -->
-  </suite> <!-- Suite1 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
